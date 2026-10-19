@@ -1,0 +1,71 @@
+name: Bug report
+description: Something in Jadarit is not working as it should
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time. This page is **public**, so please leave out
+        licence files, stream keys, passwords and anything else you would not
+        post publicly. For licence or billing questions, use jadarit.com/contact.
+
+        **Found a security vulnerability?** Please do not report it here.
+        [Report it privately](https://github.com/Jadarit-com/jadarit-releases/security/advisories/new)
+        instead, or email support@jadarit.com with "Security" in the subject,
+        so it can be fixed before it is widely known. See [SECURITY.md](https://github.com/Jadarit-com/jadarit-releases/blob/main/SECURITY.md).
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: How to reproduce it
+      description: The smallest set of steps that shows the problem, if you know them.
+      placeholder: |
+        1. Publish from OBS to rtmp://server/live/test
+        2. Open the WebRTC player
+        3. ...
+  - type: input
+    id: version
+    attributes:
+      label: Jadarit version
+      description: Shown on the dashboard's Diagnostics page, or run `curl -s http://localhost:9001/health` and copy `version` and `commit`.
+      placeholder: 0.2.0 (commit 1a2b3c4d5e6f)
+    validations:
+      required: true
+  - type: dropdown
+    id: install
+    attributes:
+      label: How it is installed
+      options:
+        - Debian package
+        - Container (Docker or Podman)
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: system
+    attributes:
+      label: Operating system and hardware
+      placeholder: Ubuntu 24.04, 4 cores, 8 GB RAM, no GPU
+  - type: textarea
+    id: clients
+    attributes:
+      label: Encoder and player
+      description: What is publishing (OBS, vMix, FFmpeg, a browser) and what is watching (which browser, app or device).
+  - type: textarea
+    id: doctor
+    attributes:
+      label: Output of `jadarit doctor`
+      description: Run it on the server. Replace any address you would rather not share with something like x.x.x.x.
+      render: text
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log lines
+      description: From the dashboard's Diagnostics page, or `journalctl -u jadarit --since "10 min ago"`.
+      render: text

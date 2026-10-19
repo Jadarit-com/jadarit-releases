@@ -1,0 +1,21 @@
+name: Feature request
+description: Something you would like Jadarit to do
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What you are trying to do
+      description: The problem or workflow, rather than a particular solution. It helps us find the right fix.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would help
+      description: How you imagine it working, if you have something in mind.
+  - type: textarea
+    id: today
+    attributes:
+      label: How you handle it today
+      description: Workarounds, other tools, or "I can't".

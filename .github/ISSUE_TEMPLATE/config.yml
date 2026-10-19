@@ -1,0 +1,12 @@
+# No blank issues: the forms ask for what we need to answer quickly.
+blank_issues_enabled: false
+contact_links:
+  - name: Licences, invoices and sales
+    url: https://jadarit.com/contact/
+    about: Buying, renewing or reissuing a licence, and anything about payments.
+  - name: Documentation
+    url: https://jadarit.com/docs/
+    about: Installation, configuration and the API reference.
+  - name: Report a security issue privately
+    url: https://github.com/Jadarit-com/jadarit-releases/security/advisories/new
+    about: Please do not open a public issue for vulnerabilities.
