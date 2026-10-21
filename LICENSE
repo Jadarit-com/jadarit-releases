@@ -19,6 +19,8 @@ Use of the software is governed by the Jadarit Terms of Service at
 https://jadarit.com/legal/terms/, which form part of this licence.
 
 The software includes third-party components distributed under their own
-licences, which continue to apply to those components.
+licences, which continue to apply to those components. They are listed, with
+their licence texts, in THIRD-PARTY-NOTICES.txt, published with each release
+and installed in /usr/share/doc/jadarit/.
 
 Contact: support@jadarit.com
